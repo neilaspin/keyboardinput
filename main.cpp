@@ -4,7 +4,7 @@
 #include <ctime>
 using namespace std;
 
-date time() {
+void date() {
 
     std::time_t t = std::time(0);   // get time now
     std::tm* now = std::localtime(&t);
@@ -12,7 +12,7 @@ date time() {
               << (now->tm_mon + 1) << '-'
               <<  now->tm_mday
               << "\n";
-    return now->tm_mday
+
 }
 
 //class A {
@@ -114,7 +114,8 @@ int main() {
 //        cout<<i<<" ";
 //    }
 
-    time();
+    cout << " The date today is: " << endl;
+    date();
     return 0;
 }
 
