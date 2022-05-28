@@ -1,6 +1,19 @@
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <ctime>
 using namespace std;
+
+date time() {
+
+    std::time_t t = std::time(0);   // get time now
+    std::tm* now = std::localtime(&t);
+    std::cout << (now->tm_year + 1900) << '-'
+              << (now->tm_mon + 1) << '-'
+              <<  now->tm_mday
+              << "\n";
+    return now->tm_mday
+}
 
 //class A {
 //
@@ -62,11 +75,36 @@ int main() {
 
 
 
-//    if (initialScore < 10) {
-//        cout << "Im afraid that your score is less than 10";
-//    } else cout << "Your score is now " << (initialScore + 5) << " Well done" << endl;
-//           cout << "Well done " << endl;
+    if (averageMean < 10) {
+        cout << "Im afraid that your score is less than 10";
+    } else cout << "Your score is now " << (averageMean + 5) << " Well done" << endl;
+           cout << "Well done " << endl;
 
+
+    int day = 6;
+    switch (day) {
+        case 1:
+            cout << "Monday";
+            break;
+        case 2:
+            cout << "Tuesday";
+            break;
+        case 3:
+            cout << "Wednesday";
+            break;
+        case 4:
+            cout << "Thursday";
+            break;
+        case 5:
+            cout << "Friday";
+            break;
+        case 6:
+            cout << "Saturday";
+            break;
+        case 7:
+            cout << "Sunday";
+            break;
+    }
 //    cin.get() consumes newlinw char
 
 //    int arr[]={1,2,3,4,5};
@@ -76,7 +114,7 @@ int main() {
 //        cout<<i<<" ";
 //    }
 
-
+    time();
     return 0;
 }
 
