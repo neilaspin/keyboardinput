@@ -15,6 +15,11 @@ void date() {
 
 }
 
+// Create a function
+void myFunction() {
+    cout << "I just got executed!";
+}
+
 //class A {
 //
 //
@@ -116,6 +121,29 @@ int main() {
 
     cout << " The date today is: " << endl;
     date();
+
+    for (int i = 0; i < 5; i++) {
+        cout << i << "\n";
+    }
+    myFunction() ;
+    cout << endl;
+    myFunction() ;
+    cout << endl;
+    myFunction() ;
+    cout << endl;
+    myFunction() ;
+    cout << endl;
+
+    int i = 50;
+    while (i > 5) {
+        cout << i << "\n";
+        i--;
+    }
+    int j = 5;
+    while (j < 50) {
+        cout << j << "\n";
+        j++;
+    }
     return 0;
 }
 
